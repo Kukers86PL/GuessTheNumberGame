@@ -21,9 +21,9 @@
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #0000FF; /* Green */
+  color: #FFFFFF;
   border: none;
-  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;

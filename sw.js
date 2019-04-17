@@ -14,7 +14,8 @@ const precacheFiles = [
 	'./images/hello-icon-192.png',
 	'./images/hello-icon-256.png',
 	'./images/hello-icon-512.png',
-	'./favicon.ico'
+	'./favicon.ico',
+	'./manifest.json'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
