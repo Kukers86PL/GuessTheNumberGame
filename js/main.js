@@ -1,13 +1,13 @@
 window.onload = () => {
-  'use strict';
+	'use strict';
 
-  if ("serviceWorker" in navigator) {
-	  if (!navigator.serviceWorker.controller) {
-		// Register the service worker
-		navigator.serviceWorker
-		  .register("./sw.js", {
-			scope: "./"
-		  })
-	  }
-  }
+	if ("serviceWorker" in navigator) {
+		if (!navigator.serviceWorker.controller) {
+			// Register the service worker
+			navigator.serviceWorker
+			.register("./sw.js", {
+				scope: "./"
+			})
+		}
+	}
 }
