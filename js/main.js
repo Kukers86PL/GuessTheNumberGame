@@ -14,7 +14,7 @@ window.onload = () => {
 }
 
 function getClientData() {
-	var request = self.indexedDB.open('GuessTheNumberGame', 1);
+	var request = self.indexedDB.open('GuessTheNumberGameDB', 1);
 
 	request.onsuccess = function (event) {
 
@@ -64,6 +64,41 @@ function getClientData() {
 
 function getRandom() {
 	var min = Math.ceil(0);
-	var max = Math.floor(1000000);
+	var max = Math.floor(1000000000);
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function updateClientData() {
+	var request = self.indexedDB.open('GuessTheNumberGameDB', 1);
+
+	request.onsuccess = function (event) {
+
+		// get database from event
+		var db = event.target.result;
+
+		// create transaction from database
+		var transaction = db.transaction('client_data', 'readwrite');
+
+		// get store from transaction
+		var client_data_store = transaction.objectStore('client_data');
+		
+		var client_nickname = document.getElementById('nickname').value;
+
+		client_data_store.count().onsuccess = function (event) {
+			if (event.target.result == 1) {
+				client_data_store.get(1).onsuccess = function (event) {
+					var client_data = event.target.result;
+					client_data.nickname = client_nickname;
+					client_data_store.clear().onsuccess = function (event) {
+						client_data_store.add(client_data);
+					};
+				};
+			} else {
+				client_data_store.clear().onsuccess = function (event) {
+					getClientData();
+				};
+			}
+		};
+	};
+}
+
