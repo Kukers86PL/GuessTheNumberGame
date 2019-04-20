@@ -38,9 +38,13 @@ function getClientData() {
 				};
 				client_data_store.add(client_data);
 				document.getElementById('nickname').value = client_nickname;
-			} else {
+			} else if (event.target.result == 1){
 				client_data_store.get(1).onsuccess = function (event) {
 					document.getElementById('nickname').value = event.target.result.nickname;
+				};
+			} else {
+				client_data_store.clear().onsuccess = function (event) {
+					getClientData();
 				};
 			}
 		};
