@@ -64,7 +64,7 @@ function checkPick() {
 			document.getElementById('thegame').value = 0;
 		} else if (pick < number) {
 			result += "below";
-		} else {
+		} else if (pick > number){
 			result += "abowe";
 		}
 		document.getElementById('result').value = result;
