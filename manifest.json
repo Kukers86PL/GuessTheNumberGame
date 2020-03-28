@@ -34,7 +34,7 @@
 		}
 	],
 	"lang": "en-US",
-	"start_url": "/index.html",
+	"start_url": "https://kukers86.ddns.net/GuessTheNumberGame/index.html",
 	"display": "standalone",
 	"background_color": "white",
 	"theme_color": "white"
