@@ -1,0 +1,65 @@
+.fullscreen {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+.container {
+  margin: auto;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+}
+
+.regular {
+ font-size: 1.5rem;
+ color: #FFFFFF;
+}
+
+.button {
+  background-color: #0000FF; /* Green */
+  color: #FFFFFF;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.stepper {
+  border: 1px solid #eee;
+  display: inline-block;
+  overflow: visible;
+  height: 2.1em;
+  background: #fff;
+  padding: 1px;
+}
+
+.stepper input {
+  width: 3em;
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  color: #000;
+}
+
+.stepper button {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: 0.1em;
+  font-size: 1.4em;
+  padding: 0.2em;
+  background: #eee;
+  color: #333;
+  border: none;
+}

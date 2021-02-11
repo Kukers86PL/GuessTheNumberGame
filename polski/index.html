@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Guess The Number Game</title>
+		<link rel="manifest" href="manifest.json"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="apple-touch-icon" href="images/hello-icon-152.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="theme-color" content="white"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="apple-mobile-web-app-title" content="Guess The Number Game"/>
+		<meta name="msapplication-TileImage" content="images/hello-icon-144.png"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF"/>
+		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
+	</head>
+	<body class="fullscreen">
+		<div class="container">
+			<h1 class="title">Witam w Guess The Number Game</h1>
+			<p class="regular">Celem tej prostej gry jest odganięcie losowo wygenerowanej liczby z zakresu 0 do 100</p>
+			<p class="regular">Żeby zrealizować ten cel w każdej rundzie musisz strzelić liczbę</p>
+			<p class="regular">Po strzale otrzymasz rezultat czy twój strzał jest poprawny czy nie</p>
+			<p class="regular">Jeżeli twój strzał jest poprawny to brawo ukończyłeś grę</p>
+			<p class="regular">Jeżeli nie, otrzymasz informację czy twój strzał jest powyżej czy poniżej prawidłowej liczby</p>
+			<p class="regular">Miłej zabawy!</p>
+			<p class="regular"> <label for="nickname">Your nickname:</label></p>
+			<input type="text" id="nickname" name="nickname" value="" onchange="updateClientData()"/>
+			<p class="regular">Stworzone przez Łukasz Grzelak (lukasz.grzelak.86@gmail.com)</p>
+			<p class="regular">v1.4</p>
+			<button class="button" type="button" onclick="window.location.href='./game.html'">START</button>
+						<button class="button" type="button" onclick="window.location.href='../index.html'">WSTECZ</button>
+
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
