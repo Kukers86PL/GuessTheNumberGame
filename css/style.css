@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: #000000;
 }
 
 .container {
@@ -14,10 +15,12 @@
 
 .title {
   font-size: 2.5rem;
+  color: #FFFFFF;
 }
 
 .regular {
  font-size: 1.5rem;
+ color: #FFFFFF;
 }
 
 .button {
