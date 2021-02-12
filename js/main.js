@@ -13,6 +13,13 @@ window.onload = () => {
 	}
 }
 
+function setStyleSheet(url){
+   var stylesheet = document.getElementById("stylesheet");
+   stylesheet.setAttribute('href', url);
+   document.getElementById("mode").value = url;
+   updateClientData();
+}
+
 function getClientData() {
 	var request = self.indexedDB.open('GuessTheNumberGameDB', 1);
 
@@ -31,16 +38,20 @@ function getClientData() {
 			if (event.target.result == 0) {
 				var client_id = getRandom();
 				var client_nickname = 'quest_' + client_id;
+				var client_mode = "/css/dark.css";
 				var client_data = {
 					id: 1,
 					client: client_id,
-					nickname: client_nickname
+					nickname: client_nickname,
+					mode: client_mode
 				};
 				client_data_store.add(client_data);
 				document.getElementById('nickname').value = client_nickname;
+				setStyleSheet(client_mode);
 			} else if (event.target.result == 1){
 				client_data_store.get(1).onsuccess = function (event) {
 					document.getElementById('nickname').value = event.target.result.nickname;
+					setStyleSheet(event.target.result.mode);
 				};
 			} else {
 				client_data_store.clear().onsuccess = function (event) {
@@ -83,12 +94,14 @@ function updateClientData() {
 		var client_data_store = transaction.objectStore('client_data');
 		
 		var client_nickname = document.getElementById('nickname').value;
+		var client_mode = document.getElementById('mode').value;
 
 		client_data_store.count().onsuccess = function (event) {
 			if (event.target.result == 1) {
 				client_data_store.get(1).onsuccess = function (event) {
 					var client_data = event.target.result;
 					client_data.nickname = client_nickname;
+					client_data.mode = client_mode;
 					client_data_store.clear().onsuccess = function (event) {
 						client_data_store.add(client_data);
 					};
@@ -101,4 +114,3 @@ function updateClientData() {
 		};
 	};
 }
-
