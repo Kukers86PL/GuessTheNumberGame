@@ -7,10 +7,29 @@ window.onload = () => {
 		if (!navigator.serviceWorker.controller) {
 			// Register the service worker
 			navigator.serviceWorker
-			.register("./sw.js", {
+			.register("../sw.js", {
 				scope: "./"
 			})
 		}
+	}
+	
+	var inc = document.getElementsByClassName("stepper");
+	for (var i = 0; i < inc.length; i++) {
+		var incI = inc[i].querySelector("input"),
+		id = incI.getAttribute("id"),
+		min = incI.getAttribute("min"),
+		max = incI.getAttribute("max"),
+		step = incI.getAttribute("step");
+		document
+		.getElementById(id)
+		.previousElementSibling.setAttribute(
+			"onclick",
+			"stepperInput('" + id + "', -" + step + ", " + min + ")");
+		document
+		.getElementById(id)
+		.nextElementSibling.setAttribute(
+			"onclick",
+			"stepperInput('" + id + "', " + step + ", " + max + ")");
 	}
 }
 
@@ -72,25 +91,6 @@ function getClientData() {
 	};
 }
 
-var inc = document.getElementsByClassName("stepper");
-for (i = 0; i < inc.length; i++) {
-	var incI = inc[i].querySelector("input"),
-	id = incI.getAttribute("id"),
-	min = incI.getAttribute("min"),
-	max = incI.getAttribute("max"),
-	step = incI.getAttribute("step");
-	document
-	.getElementById(id)
-	.previousElementSibling.setAttribute(
-		"onclick",
-		"stepperInput('" + id + "', -" + step + ", " + min + ")");
-	document
-	.getElementById(id)
-	.nextElementSibling.setAttribute(
-		"onclick",
-		"stepperInput('" + id + "', " + step + ", " + max + ")");
-}
-
 function stepperInput(id, s, m) {
 	var el = document.getElementById(id);
 	if (s > 0) {
@@ -113,8 +113,8 @@ function getRandom() {
 function checkPick() {
 	game = document.getElementById('thegame').value;
 	if (game == 1) {
-		number = document.getElementById('thenumber').value;
-		pick = document.getElementById('stepper').value;
+		number = Math.floor(document.getElementById('thenumber').value);
+		pick = Math.floor(document.getElementById('stepper').value);
 		picks = document.getElementById('thepicks').value;
 		picks++;
 		result = "Your pick is ";
