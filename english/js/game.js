@@ -20,16 +20,34 @@ window.onload = () => {
 		min = incI.getAttribute("min"),
 		max = incI.getAttribute("max"),
 		step = incI.getAttribute("step");
+
 		document
 		.getElementById(id)
-		.previousElementSibling.setAttribute(
+		.previousElementSibling
+		.setAttribute(
 			"onclick",
 			"stepperInput('" + id + "', -" + step + ", " + min + ")");
+		
 		document
 		.getElementById(id)
-		.nextElementSibling.setAttribute(
+		.previousElementSibling.previousElementSibling
+		.setAttribute(
+			"onclick",
+			"stepperInput('" + id + "', -" + (step * 10) + ", " + min + ")");
+			
+		document
+		.getElementById(id)
+		.nextElementSibling
+		.setAttribute(
 			"onclick",
 			"stepperInput('" + id + "', " + step + ", " + max + ")");
+			
+		document
+		.getElementById(id)
+		.nextElementSibling.nextElementSibling
+		.setAttribute(
+			"onclick",
+			"stepperInput('" + id + "', " + (step * 10) + ", " + max + ")");
 	}
 }
 
@@ -96,10 +114,16 @@ function stepperInput(id, s, m) {
 	if (s > 0) {
 		if (parseInt(el.value) < m) {
 			el.value = parseInt(el.value) + s;
+			if (parseInt(el.value) > m) {
+				el.value = m;
+			}
 		}
 	} else {
 		if (parseInt(el.value) > m) {
 			el.value = parseInt(el.value) + s;
+			if (parseInt(el.value) < m) {
+				el.value = m;
+			}
 		}
 	}
 }
