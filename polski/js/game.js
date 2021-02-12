@@ -110,19 +110,22 @@ function getClientData() {
 }
 
 function stepperInput(id, s, m) {
-	var el = document.getElementById(id);
-	if (s > 0) {
-		if (parseInt(el.value) < m) {
-			el.value = parseInt(el.value) + s;
-			if (parseInt(el.value) > m) {
-				el.value = m;
-			}
-		}
-	} else {
-		if (parseInt(el.value) > m) {
-			el.value = parseInt(el.value) + s;
+	if (document.getElementById('thegame').value == 1)
+	{
+		var el = document.getElementById(id);
+		if (s > 0) {
 			if (parseInt(el.value) < m) {
-				el.value = m;
+				el.value = parseInt(el.value) + s;
+				if (parseInt(el.value) > m) {
+					el.value = m;
+				}
+			}
+		} else {
+			if (parseInt(el.value) > m) {
+				el.value = parseInt(el.value) + s;
+				if (parseInt(el.value) < m) {
+					el.value = m;
+				}
 			}
 		}
 	}
