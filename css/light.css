@@ -9,17 +9,17 @@
 
 .container {
   margin: auto;
-  padding: 0.2rem;
+  padding: 0.2vw;
   text-align: center;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.5vw;
   color: #000000;
 }
 
 .regular {
- font-size: 1.5rem;
+ font-size: 1.5vw;
  color: #000000;
 }
 
@@ -27,38 +27,49 @@
   background-color: #0000FF; /* Green */
   color: #FFFFFF;
   border: none;
-  padding: 15px 32px;
+  padding: 1.5vw 3.2vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.5vw;
+}
+
+.input {
+  width: 15vw;
+  height: 5vw;
+  text-align: center;
+  border: 0;
+  background: #FFFFFF;
+  color: #000;
+  font-size: 1.4vw;
 }
 
 .stepper {
-  border: 1px solid #eee;
+  border: 0.1vw solid #eee;
   display: inline-block;
   overflow: visible;
-  height: 2.1em;
+  height: 3vw;
   background: #fff;
   padding: 1px;
 }
 
 .stepper input {
-  width: 3em;
+  width: 5vw;
   height: 100%;
   text-align: center;
   border: 0;
   background: transparent;
   color: #000;
+  font-size: 1.4vw;
 }
 
 .stepper button {
-  width: 1.4em;
+  width: 1.4vw;
   font-weight: 300;
   height: 100%;
-  line-height: 0.1em;
-  font-size: 1.4em;
-  padding: 0.2em;
+  line-height: 0.1vw;
+  font-size: 1.4vw;
+  padding: 0.2vw;
   background: #eee;
   color: #333;
   border: none;
