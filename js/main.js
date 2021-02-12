@@ -6,7 +6,7 @@ window.onload = () => {
 		if (!navigator.serviceWorker.controller) {
 			// Register the service worker
 			navigator.serviceWorker
-			.register("./sw.js", {
+			.register("/GuessTheNumberGame/sw.js", {
 				scope: "./"
 			})
 		}
