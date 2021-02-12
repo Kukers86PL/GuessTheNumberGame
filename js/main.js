@@ -38,7 +38,7 @@ function getClientData() {
 			if (event.target.result == 0) {
 				var client_id = getRandom();
 				var client_nickname = 'quest_' + client_id;
-				var client_mode = "/css/dark.css";
+				var client_mode = "/GuessTheNumberGame/css/dark.css";
 				var client_data = {
 					id: 1,
 					client: client_id,
