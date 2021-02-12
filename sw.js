@@ -3,19 +3,25 @@
 const CACHE = "Guess-The-Number-Game-cache";
 const precacheFiles = [
 	/* Add an array of files to precache for your app */
+	'./favicon.ico',
 	'./index.html',
-	'./game.html',
-	'./css/style.css',
-	'./js/main.js',
-	'./js/game.js',
+	'./manifest.json',
+	'./sw.js',
+	'./css/dark.css',
+	'./css/light.css',
+	'./english/game.html',
+	'./english/index.html',
+	'./english/js/game.js',
 	'./images/hello-icon-128.png',
 	'./images/hello-icon-144.png',
 	'./images/hello-icon-152.png',
 	'./images/hello-icon-192.png',
 	'./images/hello-icon-256.png',
 	'./images/hello-icon-512.png',
-	'./favicon.ico',
-	'./manifest.json'
+	'./js/main.js',
+	'./polski/game.html',
+	'./polski/index.html',
+	'./polski/js/game.js'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
@@ -94,6 +100,10 @@ function cacheFirstFetch(event) {
 
 			// This is where we call the server to get the newest version of the
 			// file to use the next time we show view
+			if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') {
+				return;
+			}
+
 			event.waitUntil(
 				fetch(event.request).then(function (response) {
 					return updateCache(event.request, response);
