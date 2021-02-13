@@ -3,25 +3,25 @@
 const CACHE = "Guess-The-Number-Game-cache";
 const precacheFiles = [
 	/* Add an array of files to precache for your app */
-	'./favicon.ico',
-	'./index.html',
-	'./manifest.json',
-	'./sw.js',
-	'./css/dark.css',
-	'./css/light.css',
-	'./english/game.html',
-	'./english/index.html',
-	'./english/js/game.js',
-	'./images/hello-icon-128.png',
-	'./images/hello-icon-144.png',
-	'./images/hello-icon-152.png',
-	'./images/hello-icon-192.png',
-	'./images/hello-icon-256.png',
-	'./images/hello-icon-512.png',
-	'./js/main.js',
-	'./polski/game.html',
-	'./polski/index.html',
-	'./polski/js/game.js'
+	'/GuessTheNumberGame/favicon.ico',
+	'/GuessTheNumberGame/index.html',
+	'/GuessTheNumberGame/manifest.json',
+	'/GuessTheNumberGame/sw.js',
+	'/GuessTheNumberGame/css/dark.css',
+	'/GuessTheNumberGame/css/light.css',
+	'/GuessTheNumberGame/english/game.html',
+	'/GuessTheNumberGame/english/index.html',
+	'/GuessTheNumberGame/english/js/game.js',
+	'/GuessTheNumberGame/images/hello-icon-128.png',
+	'/GuessTheNumberGame/images/hello-icon-144.png',
+	'/GuessTheNumberGame/images/hello-icon-152.png',
+	'/GuessTheNumberGame/images/hello-icon-192.png',
+	'/GuessTheNumberGame/images/hello-icon-256.png',
+	'/GuessTheNumberGame/images/hello-icon-512.png',
+	'/GuessTheNumberGame/js/main.js',
+	'/GuessTheNumberGame/polski/game.html',
+	'/GuessTheNumberGame/polski/index.html',
+	'/GuessTheNumberGame/polski/js/game.js'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
