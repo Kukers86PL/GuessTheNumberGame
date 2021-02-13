@@ -21,7 +21,8 @@ const precacheFiles = [
 	'/GuessTheNumberGame/js/main.js',
 	'/GuessTheNumberGame/polski/game.html',
 	'/GuessTheNumberGame/polski/index.html',
-	'/GuessTheNumberGame/polski/js/game.js'
+	'/GuessTheNumberGame/polski/js/game.js',
+	'/GuessTheNumberGame/offline.html'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
