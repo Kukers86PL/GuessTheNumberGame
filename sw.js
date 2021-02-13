@@ -25,7 +25,7 @@ const precacheFiles = [
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "/GuessTheNumberGame/offline.html";
 
 const networkFirstPaths = [
 	/* Add an array of regex of paths that should go network first */
