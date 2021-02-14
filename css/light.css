@@ -28,6 +28,12 @@
  color: #000000;
 }
 
+.regular_left {
+ font-size: 4vw;
+ color: #000000;
+ text-align: left;
+}
+
 .button {
   background-color: #0000FF; /* Green */
   color: #FFFFFF;
