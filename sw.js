@@ -22,7 +22,7 @@ const precacheFiles = [
 	'/GuessTheNumberGame/polski/game.html',
 	'/GuessTheNumberGame/polski/index.html',
 	'/GuessTheNumberGame/polski/js/game.js',
-	'/GuessTheNumberGame/offline.html'
+	'/GuessTheNumberGame/offline.html',
 	'/GuessTheNumberGame/info.html'
 ];
 
