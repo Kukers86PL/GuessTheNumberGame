@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<script src="/GuessTheNumberGame/js/main.js"></script>
 		<meta charset="utf-8" />
 		<title>Guess The Number Game</title>
 		<link rel="manifest" href="/GuessTheNumberGame/manifest.json"/>
@@ -16,9 +15,11 @@
 		<meta name="msapplication-TileImage" content="/GuessTheNumberGame/images/hello-icon-144.png"/>
 		<meta name="msapplication-TileColor" content="#FFFFFF"/>
 		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
+		<script src="/GuessTheNumberGame/js/main.js"></script>
 	</head>
 	<body class="fullscreen">
 		<div class="container">
+		<main id="main">
 			<h1 class="title">Witam w Guess The Number Game</h1>
 			<p class="regular">Celem tej prostej gry jest odganięcie losowo wygenerowanej liczby z zakresu 0 do 100</p>
 			<p class="regular">Żeby zrealizować ten cel w każdej rundzie musisz strzelić liczbę</p>
@@ -34,6 +35,7 @@
 			<button class="button" type="button" onclick="setStyleSheet('/GuessTheNumberGame/css/light.css')" href="#">TRYB JASNY</button>
 			<button class="button" type="button" onclick="setStyleSheet('/GuessTheNumberGame/css/dark.css')" href="#">TRYB CIEMNY</button><br/><br/>
 			<input type="hidden" type="string" id="mode"/>
+		</main>
 		</div>
 	</body>
 </html>
