@@ -18,6 +18,7 @@ const precacheFiles = [
 	'/GuessTheNumberGame/images/hello-icon-192.png',
 	'/GuessTheNumberGame/images/hello-icon-256.png',
 	'/GuessTheNumberGame/images/hello-icon-512.png',
+	'/GuessTheNumberGame/images/author.png',
 	'/GuessTheNumberGame/js/main.js',
 	'/GuessTheNumberGame/js/common.js',
 	'/GuessTheNumberGame/polski/game.html',
