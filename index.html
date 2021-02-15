@@ -16,6 +16,7 @@
 		<meta name="msapplication-TileColor" content="#FFFFFF"/>
 		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
 		<script src="/GuessTheNumberGame/js/main.js"></script>
+		<script src="/GuessTheNumberGame/js/common.js"></script>
 	</head>
 	<body class="fullscreen">
 		<div class="container">
@@ -23,7 +24,7 @@
 			<button class="button" type="button" onclick="window.location.href='./english/index.html'">ENGLISH</button>
 			<button class="button" type="button" onclick="window.location.href='./polski/index.html'">POLSKI</button>
 			<p class="regular">Author, contact and source info available <a href="./info.html">here</a></p>
-			<p class="regular">v1.9</p>
+			<p class="regular" id="version"><script>getVersion();</script></p>
 			<p class="regular">#gra #game #lukasz #grzelak #lukaszgrzelak #gralogiczna #logicgame #guessthenumbergame #zgadnijnumergra #guessthenumber #zgadnijnumer #fun #zabawa #kuki #kukers #babelek</p>
 			<input type="hidden" type="string" id="mode"/>
 			<input type="hidden" type="string" id="nickname"/>

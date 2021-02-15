@@ -16,6 +16,7 @@
 		<meta name="msapplication-TileColor" content="#FFFFFF"/>
 		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
 		<script src="/GuessTheNumberGame/polski/js/game.js"></script>
+		<script src="/GuessTheNumberGame/js/common.js"></script>
 	</head>
 	<body class="fullscreen">
 		<div class="container">
@@ -60,7 +61,7 @@
 				<input type="hidden" type="number" id="thepicks"/>
 				<input type="hidden" type="number" id="thegame"/>
 				<input type="hidden" type="string" id="mode"/>
-				<p class="regular">v1.9</p>
+				<p class="regular" id="version"><script>getVersion();</script></p>
 			</div>
 		</main>
 		</div>

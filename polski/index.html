@@ -16,6 +16,7 @@
 		<meta name="msapplication-TileColor" content="#FFFFFF"/>
 		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
 		<script src="/GuessTheNumberGame/js/main.js"></script>
+		<script src="/GuessTheNumberGame/js/common.js"></script>
 	</head>
 	<body class="fullscreen">
 		<div class="container">
@@ -29,7 +30,7 @@
 			<p class="regular">Miłej zabawy!</p>
 			<p class="regular"> <label for="nickname">Twój pseudonim:</label></p>
 			<input class="input" type="text" id="nickname" name="nickname" value="" onchange="updateClientData()"/>
-			<p class="regular">v1.9</p>
+			<p class="regular" id="version"><script>getVersion();</script></p>
 			<button class="button" type="button" onclick="window.location.href='./game.html'">START</button>
 			<button class="button" type="button" onclick="window.location.href='../index.html'">WSTECZ</button><br/><br/>
 			<button class="button" type="button" onclick="setStyleSheet('/GuessTheNumberGame/css/light.css')" href="#">TRYB JASNY</button>

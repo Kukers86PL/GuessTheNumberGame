@@ -16,13 +16,14 @@
 		<meta name="msapplication-TileColor" content="#FFFFFF"/>
 		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
 		<script src="/GuessTheNumberGame/js/main.js"></script>
+		<script src="/GuessTheNumberGame/js/common.js"></script>
 	</head>
 	<body class="fullscreen">
 		<div class="container">
 		<main id="main">
 			<h1 class="title">Offline</h1>
 			<p class="regular">Author, contact and source info available <a href="./info.html">here</a></p>
-			<p class="regular">v1.9</p>
+			<p class="regular" id="version"><script>getVersion();</script></p>
 			<input type="hidden" type="string" id="mode"/>
 		</main>
 		</div>

@@ -16,6 +16,7 @@
 		<meta name="msapplication-TileColor" content="#FFFFFF"/>
 		<meta name="description" content="GuessTheNumberGame - Author Łukasz Grzelak">
 		<script src="/GuessTheNumberGame/js/main.js"></script>
+		<script src="/GuessTheNumberGame/js/common.js"></script>
 	</head>
 	<body class="fullscreen">
 		<div class="container">
@@ -28,7 +29,7 @@
 			<p class="regular">GitHub: <a href="https://github.com/kukers86">https://github.com/kukers86</a></p>
 			<p class="regular">LinkedIn: <a href="https://www.linkedin.com/in/kukers86/">https://www.linkedin.com/in/kukers86/</a></p>
 			<button class="button" type="button" onclick="window.location.href='./index.html'">WSTECZ</button><br/><br/>
-			<p class="regular">v1.9</p>		
+			<p class="regular" id="version"><script>getVersion();</script></p>
 			<input type="hidden" type="string" id="mode"/>
 			<input type="hidden" type="string" id="nickname"/>
 			<input type="hidden" type="string" id="mode"/>
